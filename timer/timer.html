@@ -1,0 +1,246 @@
+<!--
+ * @html name:		index.html
+ * @description:	This html renders home page.
+ * @related issues:	WD-112
+ * @param:			void
+ * @return:			void
+ * @author:			Don Hsieh
+ * @since:			12/08/2014
+ * @last modified: 	01/30/2015
+ * @called by:		URL '/'
+-->
+<!doctype html>
+<!-- <html lang="en" ng-app='wdApp'> -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<!-- <base href='/'> -->
+	<!-- <link rel="stylesheet" href="/css/reset.css"/> -->
+	<link rel="stylesheet" href="./css/reset.min.css"/>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/> -->
+	
+	<!-- <link rel="stylesheet" href="/css/bootstrap.min.css"/> -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css"/>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/> -->
+	<!-- <link rel="stylesheet" href="/css/colorbox.css"/>
+	<link rel="stylesheet" href="/css/parsley.css"/>
+	<link rel="stylesheet" href="/css/styleguide.css"/>
+	<link rel="stylesheet" href="/css/fancybox.css"/>
+	<link rel="stylesheet" href="/css/jcf.css"/>
+	<link rel="stylesheet" href="/css/black.css"/> -->
+	<!-- <link rel="stylesheet" href="/css/jquery-ui-1.10.4.custom.min.css"/> -->
+	<link rel="stylesheet" href="./css/jquery-ui.css"/>
+	<link rel="stylesheet" href="./css/countdown.css"/>
+	<link rel="stylesheet" href="./css/TimeCircles.css"/>
+	<!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/> -->
+	<!-- <link rel="stylesheet" href="/css/don.css"/> -->
+	<!--[if lt IE 9]>
+		script(type="text/javascript", src="/js/ie.js")
+		link(rel='stylesheet', href='/css/ie.css',  media='all', type='text/css')
+		<![endif]-->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular-sanitize.min.js"></script> -->
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-sanitize.min.js"></script> -->
+	<!-- <script src='/js/app.js'></script> -->
+	<!-- <script src='./js/app.js'></script> -->
+	<!-- // <script src="//code.angularjs.org/1.3.8/angular-sanitize.min.js"></script> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+	// <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
+	// <script src="//code.angularjs.org/1.3.5/angular-sanitize.js"></script> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-sanitize.js"></script> -->
+	
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-sanitize.min.js"></script> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script> -->
+</head>
+<!-- <body ng-controller="AppController"> -->
+<body>
+	<!-- <script src='/js/app.js'></script> -->
+	<!-- <script src='app.js'></script> -->
+	<div id="wrapper">
+		<div ng-if="messages">
+			<!-- <div class="container" style="width:330px;">
+				<div ng-if="messages.error" class="alert alert-danger">{{messages.error}}</div>
+				<div ng-if="messages.info" class="alert alert-info">{{messages.info}}</div>
+				<div ng-if="messages.success" class="alert alert-success">{{messages.success}}</div>
+			</div> -->
+		</div>
+
+		<hr>
+
+		<div id="clock"></div>
+
+		<hr>
+
+		<!-- <div class="example stopwatch" data-timer="900"></div> -->
+		<div class="example stopwatch" data-timer="20"></div>
+		<button class="btn btn-success start">Start</button>
+		<button class="btn btn-danger stop">Stop</button>
+		<button class="btn btn-info restart">Restart</button>
+<!-- 
+		<div class="countdown-container" id="main-example">
+			<div class="time weeks flip">
+				<span class="count curr top">00</span>
+				<span class="count next top">47</span>
+				<span class="count next bottom">47</span>
+				<span class="count curr bottom">00</span>
+				<span class="label">weeks</span>
+			</div>
+
+			<div class="time days flip">
+				<span class="count curr top">00</span>
+				<span class="count next top">05</span>
+				<span class="count next bottom">05</span>
+				<span class="count curr bottom">00</span>
+				<span class="label">days</span>
+			</div>
+
+			<div class="time hours flip">
+				<span class="count curr top">00</span>
+				<span class="count next top">13</span>
+				<span class="count next bottom">13</span>
+				<span class="count curr bottom">00</span>
+				<span class="label">hours</span>
+			</div>
+
+			<div class="time minutes flip">
+				<span class="count curr top">21</span>
+				<span class="count next top">20</span>
+				<span class="count next bottom">20</span>
+				<span class="count curr bottom">21</span>
+				<span class="label">min</span>
+			</div>
+
+			<div class="time seconds flip">
+				<span class="count curr top">07</span>
+				<span class="count next top">06</span>
+				<span class="count next bottom">06</span>
+				<span class="count curr bottom">07</span>
+				<span class="label">sec</span>
+			</div>
+
+			<div class="time weeks flip">
+				<span class="count curr top">00</span>
+				<span class="count next top">47</span>
+				<span class="count next bottom">47</span>
+				<span class="count curr bottom">00</span>
+				<span class="label">weeks</span>
+			</div>
+
+			<div class="time days flip">
+				<span class="count curr top">00</span>
+				<span class="count next top">05</span>
+				<span class="count next bottom">05</span>
+				<span class="count curr bottom">00</span>
+				<span class="label">days</span>
+			</div>
+
+			<div class="time hours flip">
+				<span class="count curr top">00</span>
+				<span class="count next top">13</span>
+				<span class="count next bottom">13</span>
+				<span class="count curr bottom">00</span>
+				<span class="label">hours</span>
+			</div>
+
+			<div class="time minutes flip">
+				<span class="count curr top">21</span>
+				<span class="count next top">20</span>
+				<span class="count next bottom">20</span>
+				<span class="count curr bottom">21</span>
+				<span class="label">min</span>
+			</div>
+
+			<div class="time seconds flip">
+				<span class="count curr top">07</span>
+				<span class="count next top">06</span>
+				<span class="count next bottom">06</span>
+				<span class="count curr bottom">07</span>
+				<span class="label">sec</span>
+			</div>
+		</div>
+ -->
+
+		<!-- <div ng-show="home" ng-controller="HomeController" id="container" class="transitions-enabled clearfix" style="overflow:hidden; margin:0 auto; margin-bottom: 120px; position: relative; width: 80%;"></div> -->
+		<!-- <div ng-controller="HomeController" ng-style="{display: homeStyle}" id="container" class="transitions-enabled clearfix" style="overflow:hidden; margin:0 auto; margin-bottom: 120px; position: relative; width: 80%;"></div> -->
+		<!-- <div ng-controller="HomeController" id="container" ng-style="homeStyle" class="transitions-enabled clearfix"></div> -->
+		<!-- <div ng-if="home" ng-model="$parent.home" ng-controller="HomeController" id="container" class="transitions-enabled clearfix" style="overflow:hidden; margin:0 auto; margin-bottom: 120px; position: relative; width: 80%;"></div> -->
+		<!-- <hr> -->
+		<!-- <div ng-view></div> -->
+		<!-- <hr> -->
+
+
+
+	<!-- <script src='/js/app.js'></script> -->
+	<!-- // <script src='/js/wd.js'></script> -->
+	<!-- <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script> -->
+	<script src="./js/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+	<!-- <script type="text/javascript" src="/js/jquery.main.js"></script> -->
+	<!-- <script type="text/javascript" src="/js/imagesloaded.pkgd.min.js"></script> -->
+	
+	<!-- <script src="/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script> -->
+	<script src="./js/jquery-ui.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script> -->
+	<!-- // <script src="https://raw.githubusercontent.com/hilios/jQuery.countdown/master/src/countdown.js"></script> -->
+	<script src="./js/jquery.countdown.js"></script>
+	<script src="./js/moment.js"></script>
+	<script src="./js/TimeCircles.js"></script>
+	<!-- <script src="http://momentjs.com/downloads/moment.js"></script>
+	<script src="http://momentjs.com/downloads/moment-with-locales.js"></script> -->
+
+	<!-- <script src="/js/parsley.min.js" type="text/javascript"></script> -->
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.6/parsley.min.js"></script> -->
+	<script>
+	/*
+		var time = new Date();
+		console.log('time =', time);
+		console.log('time.getTime() =', time.getTime());
+		// var offset = 30 * 1000;	// 30 sec
+		var offset = 10 * 1000;	// 10 sec
+		var later = time.getTime() + offset;
+		var timeNew = new Date(later);
+		console.log('timeNew =', timeNew);
+		var target = timeNew.getFullYear() + '/' + (timeNew.getMonth() + 1) + '/' + timeNew.getDate() + ' ' + timeNew.getHours() + ':' + timeNew.getMinutes() + ':' + timeNew.getSeconds();
+		console.log('target =', target);
+	*/
+		var now = moment();
+		console.log('now =', now.format('YYYY/MM/DD HH:mm:ss'));
+		console.log('now + 8 =', now.utcOffset(8).format('YYYY/MM/DD HH:mm:ss'));
+		console.log('now + 10 =', now.utcOffset(10).format('YYYY/MM/DD HH:mm:ss'));
+		// var later20sec = moment("MM-DD-YYYY").add(20, 's');
+		// var later20sec = moment().add(20, 's').format('YYYY/MM/DD H:m:s');;
+		// console.log('later20sec =', later20sec);
+		var target = moment().add(20, 's').format('YYYY/MM/DD HH:mm:ss');;
+		console.log('target =', target);
+
+// 		getFullYear() - Returns the 4-digit year
+// getMonth() - Returns a zero-based integer (0-11) representing the month of the year.
+// getDate() - Returns the day of the month (1-31).
+// getDay() - Returns the day of the week (0-6). 0 is Sunday, 6 is Saturday.
+// getHours() - Returns the hour of the day (0-23).
+// getMinutes() - Returns the minute (0-59).
+// getSeconds() - Returns the second (0-59).
+		// $('#clock').countdown("2015/02/01 05:00:00", function(event) {
+		$('#clock').countdown(target, function(event) {
+			var totalHours = event.offset.totalDays * 24 + event.offset.hours;
+			$(this).html(event.strftime(totalHours + ' hr %M min %S sec'));
+		});
+
+		$(".example.stopwatch").TimeCircles();
+		$(".start").click(function(){
+			$(".example.stopwatch").TimeCircles().start();
+		});
+		$(".stop").click(function(){
+			$(".example.stopwatch").TimeCircles().stop();
+		});
+		$(".restart").click(function(){
+			$(".example.stopwatch").TimeCircles().restart();
+		});
+	</script>
+
+	<!--  <script src="//localhost:35729/livereload.js"></script> -->
+</body>
+</html>

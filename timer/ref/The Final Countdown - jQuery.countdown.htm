@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://hilios.github.io/jQuery.countdown/ -->
+<html><script>var urchinTracker=function(){},_gaq={push:function(){try {if(arguments[0][0]=='_link')window.location.href=arguments[0][1]}catch(er){}}},_gat={_createTracker:function(){}, _getTracker:function(){return{__noSuchMethod__:function(){},_link:function(o){if(o)location.href=o;},_linkByPost:function(){return true;},_getLinkerUrl:function(o){return o;},_trackEvent:function(){}}}};</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>The Final Countdown - jQuery.countdown</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald">
+  <link rel="stylesheet" href="http://hilios.github.io/jQuery.countdown/css/syntax.css">
+  <link rel="stylesheet" href="http://hilios.github.io/jQuery.countdown/css/main.css">
+  <script async="" src="http://www.google-analytics.com/analytics.js"></script><script src="./The Final Countdown - jQuery.countdown_files/jquery.js"></script><style type="text/css"></style>
+  <script src="./The Final Countdown - jQuery.countdown_files/bootstrap.min.js"></script>
+  <script src="./The Final Countdown - jQuery.countdown_files/lodash.min.js"></script>
+  <script src="./The Final Countdown - jQuery.countdown_files/jquery.countdown.min.js"></script>
+<style>@-webkit-keyframes popnfiqkreboxswcdizkvcatiokjwzmigkfai {50% {-webkit-transform:scale(1.2);}100% {-webkit-transform:scale(1);}}@keyframes popnfiqkreboxswcdizkvcatiokjwzmigkfai {50% {-webkit-transform:scale(1.2);transform:scale(1.2);}100% {-webkit-transform:scale(1);transform:scale(1);}}#nfiqkreboxswcdizkvcatiokjwzmigkfai{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;border:solid 2px #fff !important;box-sizing:content-box !important;color:#fff !important;display:block !important;height:auto !important;margin:0 !important;opacity:0.9 !important;padding:7px 10px !important;position:fixed !important;visibility:visible !important;width:auto !important;z-index:2147483647 !important;-webkit-border-radius:5px !important;-webkit-box-shadow:0px 0px 20px #000 !important;-webkit-box-sizing:content-box !important;}.nfiqkreboxswcdizkvcatiokjwzmigkfai-blocked{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;color:#AAA !important;display:inline !important;text-decoration:line-through !important;}#nfiqkreboxswcdizkvcatiokjwzmigkfai br{display:block !important;padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;}#nfiqkreboxswcdizkvcatiokjwzmigkfai span{background:transparent !important;padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;}#nfiqkreboxswcdizkvcatiokjwzmigkfai div{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;border:0 !important;margin:0 !important;padding:0 !important;width:auto !important;letter-spacing:normal !important;font:13px Arial,Helvetica !important;text-align:left !important;text-shadow:none !important;text-transform:none !important;word-spacing:normal !important;}#nfiqkreboxswcdizkvcatiokjwzmigkfai a{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;font-weight:normal !important;background:none !important;text-decoration:underline !important;color:#fff !important;}a#nfiqkreboxswcdizkvcatiokjwzmigkfai-gear{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;text-decoration:none !important;position:absolute !important;display:none !important;font-size:20px !important;width:20px !important;height:20px !important;line-height:20px !important;text-align:center !important;background-color:rgba(255,255,255,.8) !important;background-image:url(chrome-extension://mlomiejdfkolichcflejclcbmpeaniij/data/images/gear.svg) !important;background-size:16px 16px !important;background-position:center center !important;background-repeat:no-repeat !important;text-decoration:none !important;}a#nfiqkreboxswcdizkvcatiokjwzmigkfai-gear:hover{-webkit-animation-name:popnfiqkreboxswcdizkvcatiokjwzmigkfai !important;animation-name:popnfiqkreboxswcdizkvcatiokjwzmigkfai !important;-webkit-animation-duration:0.3s !important;animation-duration:0.3s !important;}#nfiqkreboxswcdizkvcatiokjwzmigkfai:hover #nfiqkreboxswcdizkvcatiokjwzmigkfai-gear{text-decoration:none !important;display:inline-block !important;}@media print{#nfiqkreboxswcdizkvcatiokjwzmigkfai{display:none !important;}}</style><meta name="chromesniffer" id="chromesniffer_meta" content="{&quot;jQuery&quot;:&quot;1.11.1&quot;,&quot;Underscore.js&quot;:&quot;2.4.1&quot;}"><script type="text/javascript" src="chrome-extension://homgcnaoacgigpkkljjjekpignblkeae/detector.js"></script></head>
+<body>
+<header>
+  <div class="container">
+    <div class="pure-g-r">
+      <div class="pure-u-1-5">
+        <a href="./The Final Countdown - jQuery.countdown_files/The Final Countdown - jQuery.countdown.htm" class="brand">jQuery.countdown</a>
+        <div class="nav-toggle pure-hidden-tablet pure-hidden-desktop">
+          <button class="pure-button">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div class="pure-u-4-5">
+        <nav class="pure-menu pure-menu-horizontal pure-menu-open">
+          <ul>
+  <li>
+    <a href="http://hilios.github.io/jQuery.countdown/documentation.html">
+      Documentation
+    </a>
+  </li>
+  <li>
+    <a href="http://hilios.github.io/jQuery.countdown/examples.html">
+      Examples
+    </a>
+  </li>
+  <li>
+    <a href="http://hilios.github.io/jQuery.countdown/tests.html">
+      Test suite
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/hilios/jQuery.countdown">
+      GitHub Project
+    </a>
+  </li>
+  <li>
+    <a href="http://plugins.jquery.com/countdown/">
+      jQuery Plugins
+    </a>
+  </li>
+</ul>
+
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="home-welcome">
+  <div class="container">
+    <div class="pure-g-r">
+      <div class="pure-u-1-2">
+        <h1>
+          <i class="fa fa-clock-o"></i>
+          The Final Countdown
+        </h1>
+        <p>
+          A simple and html agnostic date countdown plugin for jQuery
+          </p><div class="gh-btns">
+  <!-- Follow -->
+  <iframe src="./The Final Countdown - jQuery.countdown_files/github-btn(2).htm" allowtransparency="true" frameborder="0" scrolling="0" width="120" height="20"></iframe>
+  <!-- Watch -->
+  <iframe src="./The Final Countdown - jQuery.countdown_files/github-btn(1).htm" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+  <!-- Fork -->
+  <iframe src="./The Final Countdown - jQuery.countdown_files/github-btn.htm" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+</div>
+
+        <p></p>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="main-example">
+  <p>
+    Next year begins in:
+  </p>
+  <div class="countdown-container" id="main-example">
+<div class="time weeks flip">
+  <span class="count curr top">00</span>
+  <span class="count next top">47</span>
+  <span class="count next bottom">47</span>
+  <span class="count curr bottom">00</span>
+  <span class="label">weeks</span>
+</div>
+
+<div class="time days flip">
+  <span class="count curr top">00</span>
+  <span class="count next top">05</span>
+  <span class="count next bottom">05</span>
+  <span class="count curr bottom">00</span>
+  <span class="label">days</span>
+</div>
+
+<div class="time hours flip">
+  <span class="count curr top">00</span>
+  <span class="count next top">15</span>
+  <span class="count next bottom">15</span>
+  <span class="count curr bottom">00</span>
+  <span class="label">hours</span>
+</div>
+
+<div class="time minutes flip">
+  <span class="count curr top">12</span>
+  <span class="count next top">11</span>
+  <span class="count next bottom">11</span>
+  <span class="count curr bottom">12</span>
+  <span class="label">min</span>
+</div>
+
+<div class="time seconds flip">
+  <span class="count curr top">06</span>
+  <span class="count next top">05</span>
+  <span class="count next bottom">05</span>
+  <span class="count curr bottom">06</span>
+  <span class="label">sec</span>
+</div>
+</div>
+</div>
+<script type="text/template" id="main-example-template">
+<div class="time <%= label %>">
+  <span class="count curr top"><%= curr %></span>
+  <span class="count next top"><%= next %></span>
+  <span class="count next bottom"><%= next %></span>
+  <span class="count curr bottom"><%= curr %></span>
+  <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+</div>
+</script>
+<script type="text/javascript">
+  $(window).on('load', function() {
+    var labels = ['weeks', 'days', 'hours', 'minutes', 'seconds'],
+      nextYear = (new Date().getFullYear() + 1) + '/01/01',
+      template = _.template($('#main-example-template').html()),
+      currDate = '00:00:00:00:00',
+      nextDate = '00:00:00:00:00',
+      parser = /([0-9]{2})/gi,
+      $example = $('#main-example');
+    // Parse countdown string to an object
+    function strfobj(str) {
+      var parsed = str.match(parser),
+        obj = {};
+      labels.forEach(function(label, i) {
+        obj[label] = parsed[i]
+      });
+      return obj;
+    }
+    // Return the time components that diffs
+    function diff(obj1, obj2) {
+      var diff = [];
+      labels.forEach(function(key) {
+        if (obj1[key] !== obj2[key]) {
+          diff.push(key);
+        }
+      });
+      return diff;
+    }
+    // Build the layout
+    var initData = strfobj(currDate);
+    labels.forEach(function(label, i) {
+      $example.append(template({
+        curr: initData[label],
+        next: initData[label],
+        label: label
+      }));
+    });
+    // Starts the countdown
+    $example.countdown(nextYear, function(event) {
+      var newDate = event.strftime('%w:%d:%H:%M:%S'),
+        data;
+      if (newDate !== nextDate) {
+        currDate = nextDate;
+        nextDate = newDate;
+        // Setup the data
+        data = {
+          'curr': strfobj(currDate),
+          'next': strfobj(nextDate)
+        };
+        // Apply the new values to each node that changed
+        diff(data.curr, data.next).forEach(function(label) {
+          var selector = '.%s'.replace(/%s/, label),
+              $node = $example.find(selector);
+          // Update the node
+          $node.removeClass('flip');
+          $node.find('.curr').text(data.curr[label]);
+          $node.find('.next').text(data.next[label]);
+          // Wait for a repaint to then flip
+          _.delay(function($node) {
+            $node.addClass('flip');
+          }, 5, $node);
+        });
+      }
+    });
+  });
+</script>
+
+      </div>
+    </div>
+    <div class="pure-g-r">
+      <div class="pure-u-1-1">
+        <p>
+          <a class="button-xlarge pure-button" href="https://github.com/hilios/jQuery.countdown/releases/download/2.0.4/jquery.countdown-2.0.4.zip" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;download&#39;, &#39;click&#39;);">
+            <i class="fa fa-file-zip-o"></i>
+            Download 2.0.4
+          </a>
+          <a class="button-xlarge pure-button" href="https://github.com/hilios/jQuery.countdown">
+            <i class="fa fa-github-alt"></i>
+            View on GitHub
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="home-content container">
+  <div class="pure-g-r">
+    <div class="pure-u-1-2">
+      <article>
+        <h2>All countdown styles in one</h2>
+        <p class="lead">
+          Take control of your DOM, register yours callbacks and start counting!
+        </p>
+        <p>
+          The Final Countdown is a plugin tailored to be used in any layout, without any CSS/HTML dependency. The goal was to fit and mimic differents countdown styles as you see out there in <strong>coupons</strong> and <strong>auction</strong> sites.
+        </p>
+        <p>
+          There are few ways to get started, the simplest example is as shown here, but we support many different countdown styles.
+        </p>
+        <p>
+          Read our <a href="http://hilios.github.io/jQuery.countdown/documentation.html">Documentation</a> and follow our <a href="http://hilios.github.io/jQuery.countdown/examples.html">Examples</a> to see what suits your particular needs.
+        </p>
+        <h4>Features</h4>
+        <ul>
+          <li>Comprehensive documentation;</li>
+          <li>Bult-in time formatter;</li>
+          <li>Zero-pad support to all variables;</li>
+          <li>Pluralization support;</li>
+          <li>i18n aware;</li>
+          <li>HTML and CSS agnostic;</li>
+          <li>Support since 2011.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="pure-u-1-2">
+      <article>
+        <h2>Getting Started</h2>
+        <h4>Install via Bower:</h4>
+        <p>
+          </p><div class="highlight"><pre><code class="bash">bower install jquery.countdown
+</code></pre></div>
+        <p></p>
+        <div class="download">
+          <h4>Download files:</h4>
+          <p>
+            <a class="pure-button" href="https://github.com/hilios/jQuery.countdown/releases/download/2.0.4/jquery.countdown-2.0.4.zip" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;download&#39;, &#39;click&#39;);">
+              <i class="fa fa-file-zip-o"></i>
+              Download jQuery.countdown.zip
+            </a>
+          </p>
+        </div>
+        <h4>Example:</h4>
+        <div class="home-countdown-example" id="getting-started">47 weeks 5 days 15h 11m 05s</div>
+        <div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"getting-started"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="lineno"> 2</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+<span class="lineno"> 3</span>   <span class="nx">$</span><span class="p">(</span><span class="s2">"#getting-started"</span><span class="p">)</span>
+<span class="lineno"> 4</span>   <span class="p">.</span><span class="nx">countdown</span><span class="p">(</span><span class="s2">"2015/01/01"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 5</span>     <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span>
+<span class="lineno"> 6</span>       <span class="nx">event</span><span class="p">.</span><span class="nx">strftime</span><span class="p">(</span><span class="s1">'%D days %H:%M:%S'</span><span class="p">)</span>
+<span class="lineno"> 7</span>     <span class="p">);</span>
+<span class="lineno"> 8</span>   <span class="p">});</span>
+<span class="lineno"> 9</span> <span class="nt">&lt;/script&gt;</span>
+<span class="lineno">10</span>         
+</code></pre></div>
+      </article>
+    </div>
+  </div>
+  <div class="pure-g-r">
+    <div class="pure-u-1-2">
+      <article>
+        <h2>Get involved</h2>
+
+        <p>
+          This is a open source project, so this implicates that relies on you too to get improved.
+        </p>
+        <p>
+          There are many ways to participate, and our GitHub is always open to help you solve your problems. Choose a path and help us to get better:
+        </p>
+
+        <dl class="home-get-involved">
+          <dd>
+            <i class="fa fa-bug"></i>
+            <a href="https://github.com/hilios/jQuery.countdown/issues">Report a bug</a>
+          </dd>
+          <dd>
+            <i class="fa fa-code-fork"></i>
+            <a href="https://github.com/hilios/jQuery.countdown/pulls">Fix something</a>
+          </dd>
+          <dd>
+            <i class="fa fa-paper-plane-o"></i>
+            <a href="https://github.com/hilios/jQuery.countdown/issues">Request or submit features</a>
+          </dd>
+          <dd>
+            <i class="fa fa-support"></i>
+            <a href="https://github.com/hilios/jQuery.countdown/issues?state=open">Help others</a>
+          </dd>
+        </dl>
+      </article>
+    </div>
+    <div class="pure-u-1-2">
+      <article>
+        <div class="home-video-container">
+          <iframe width="560" height="315" src="./The Final Countdown - jQuery.countdown_files/9jK-NcRmVcw.htm" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var nextYear = (new Date().getFullYear() + 1) + "/01/01";
+  $("#getting-started").countdown(nextYear, function(event) {
+    $(this).html(event.strftime('%-w weeks %-d days %Hh %Mm %Ss'));
+  });
+</script>
+
+</main>
+<footer>
+  <div class="container">
+    <p>
+      </p><div class="gh-btns">
+  <!-- Follow -->
+  <iframe src="./The Final Countdown - jQuery.countdown_files/github-btn(2).htm" allowtransparency="true" frameborder="0" scrolling="0" width="120" height="20"></iframe>
+  <!-- Watch -->
+  <iframe src="./The Final Countdown - jQuery.countdown_files/github-btn(1).htm" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+  <!-- Fork -->
+  <iframe src="./The Final Countdown - jQuery.countdown_files/github-btn.htm" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+</div>
+
+    <p></p>
+    <p>
+      The Final Countdown (jQuery.countdown) was created and is maintained by <a href="https://github.com/hilios" target="_blank">@hilios</a>
+      <br>
+      This is a free software is licensed under the <a href="https://github.com/hilios/jQuery.countdown/blob/master/LICENSE.md" target="_blank">MIT License</a>
+    </p>
+    <nav>
+      <ul>
+  <li>
+    <a href="http://hilios.github.io/jQuery.countdown/documentation.html">
+      Documentation
+    </a>
+  </li>
+  <li>
+    <a href="http://hilios.github.io/jQuery.countdown/examples.html">
+      Examples
+    </a>
+  </li>
+  <li>
+    <a href="http://hilios.github.io/jQuery.countdown/tests.html">
+      Test suite
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/hilios/jQuery.countdown">
+      GitHub Project
+    </a>
+  </li>
+  <li>
+    <a href="http://plugins.jquery.com/countdown/">
+      jQuery Plugins
+    </a>
+  </li>
+</ul>
+
+    </nav>
+  </div>
+</footer>
+<a class="pure-hidden-phone pure-hidden-tablet" href="https://github.com/hilios/jQuery.countdown"><img style="position: absolute; top: 0; right: 0; border: 0; position: fixed; z-index: 1050;" src="./The Final Countdown - jQuery.countdown_files/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-3435172-4', 'hilios.github.io');
+ga('send', 'pageview');
+</script>
+<script type="text/javascript">
+$(function() {
+  $('.nav-toggle > button').click(function(event) {
+    $('header nav').toggleClass('active');
+  });
+});
+</script>
+
+
+</body></html>
