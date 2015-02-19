@@ -3,19 +3,26 @@
 	<head>
 		<meta charset="utf-8">
 		<!-- <link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+		<link href="js/angular-timer-master/bower_components/bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet">
+        <link href="js/angular-timer-master/bower_components/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <script src="js/angular-timer-master/bower_components/bootstrap/docs/assets/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="./bootstrap.min.css">
 		<!-- <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script> -->
 		<script src="./angular.min.js"></script>
 		<script src="./moment.js"></script>
+		<script src="./timer.js"></script>
+		<script src="./ui-bootstrap-tpls-0.12.0.min.js"></script>
 		<style>
 			body {
 				position: right;
-				width:1024px;
+				width:2014px;
 			}
+
+
 		</style>
 		<script>
 			// var uid = 1;
-			var MemberApp = angular.module('MemberApp', []);
+			var MemberApp = angular.module('MemberApp', ['timer','ui.bootstrap']);
 			MemberApp.controller('MemberCtrl', function($scope) {
 				$scope.members = [
 					{ code : 16 ,'name' : '程昌興','grade': '3.1','position': '指揮官'  },
@@ -72,6 +79,23 @@
 					$scope.staffs[key].time = now;
 				};
 			});
+
+			MemberApp.controller('CountDownTimerCtrl', function ($scope) {
+				 $scope.timerRunning = true;
+
+	            $scope.startTimer = function (){
+	                $scope.$broadcast('timer-start');
+	                $scope.timerRunning = true;
+	            };
+
+	            $scope.stopTimer = function (){
+	                $scope.$broadcast('timer-stop');
+	                $scope.timerRunning = false;
+	            };
+
+	            alert($scope.seconds)
+
+			});
 		</script>
 	</head>
 	<body>
@@ -119,12 +143,19 @@
 						<tr ng-repeat="staff in staffs">
 							<td>{{ staff.name }}</td>
 							<td>{{ staff.position }}</td>
-							<td>
-								<button class="btn" ng-click="setTime(staff)">執勤</button>
-							</td>
-							<td>
-								{{staff.time}}
-							</td>
+							<div ng-controller="CountDownTimerCtrl">
+								<td>
+									<button class="btn" ng-click="startTimer('progressbar-timer')" ng-disabled="timerRunning">執勤</button>
+								</td>
+								<td>
+									<button class="btn" ng-click="stopTimer('progressbar-timer')" ng-disabled="!timerRunning">結束勤務</button>
+								</td>
+								<td>
+									<timer interval="1000"><div class="progress {{status}} progress-striped active"> <div class="bar" style="width: {{seconds}}%;"></div> </div></timer>
+								</td>
+								
+							</div>
+							
 						</tr>
 					</tbody>
 				</table>
