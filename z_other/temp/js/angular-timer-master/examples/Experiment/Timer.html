@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../bower_components/angular/angular.min.js"></script>
+	    <script src="../app/js/timer.js"></script>
+	    <script>
+	    	var myTimer = angular.module('myTimer', []);
+	    	myTimer.controller('TimerController',function($scope){
+	    		$scope.timerrunning
+
+	    		$scope.startTimer = function(){
+	    			$scope.$broadcast('time-start', args)
+	    		}
+
+
+	    	});
+
+	    </script>
+    </head>
+    <body>
+    	<timer interval="1000"><div class="progress progress-striped active"> <div class="bar" style="width: {{seconds}}%;"></div> </div></timer>
+    </body>
+</html>
