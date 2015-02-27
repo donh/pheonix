@@ -18,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) {
 	app.use(express.errorHandler());
 }
+app.use('/', routes.root);
 app.use('/141022_react/', routes.react);
 app.use('/140811_auto/', routes.auto);
 app.use('/140610_doc/', routes.doc);
