@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS Example - Single Timer Example</title>
+    <link rel="stylesheet" href="../common/bootstrap/docs/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../common/bootstrap/docs/assets/css/bootstrap-responsive.css">
+    <script src="../common/angular/angular.min.js"></script>
+    <script src="../common/bootstrap/docs/assets/js/bootstrap.js"></script>
+    <script src="../common/js/timer.js"></script>
+    <script scr="../common/js/ui-bootstrap-tpls-0.12.0.min.js"></script>
+    <script src="../common/js/TimeCtrl.js"></script>
+</head>
+<body ng-app="MyApp">
+    <div ng-controller="MyAppController">
+        <h1>AngularJS - Single Timer Example</h1>
+       <timer interval="1000"><div class="progress {{statusProperty}} progress-striped active"> <div class="bar" style="width: {{percentage}}%;"></div> </div></timer>
+       <p><timer>Seconds:{{seconds}}</timer></p>
+       <p><timer>Status:{{state}}</timer> </p>
+       <br>
+        <button class="btn btn-success" ng-click="startTimer('progressbar-timer')">Start Timer</button>
+        <button class="btn btn-danger" ng-click="stopTimer('progressbar-timer')">Stop Timer</button>
+    </div>
+    <br><br/>
+     <div ng-controller="MyAppController">
+        <h1>AngularJS - Single Timer Example</h1>
+       <timer interval="1000"><div class="progress {{statusProperty}} progress-striped active"> <div class="bar" style="width: {{percentage}}%;"></div> </div></timer>
+       <p><timer>Seconds:{{seconds}}</timer></p>
+       <p><timer>Status:{{state}}</timer> </p>
+        <button class="btn btn-success" ng-click="startTimer('progressbar-timer')">Start Timer</button>
+        <button class="btn btn-danger" ng-click="stopTimer('progressbar-timer')">Stop Timer</button>
+    </div>
+    <br>
+     <div ng-controller="MyAppController">
+        <h1>AngularJS - Single Timer Example</h1>
+       <timer interval="1000"><div class="progress {{statusProperty}} progress-striped active"> <div class="bar" style="width: {{percentage}}%;"></div> </div></timer>
+       <p><timer>Seconds:{{seconds}}</timer></p>
+       <p><timer>Status:{{state}}</timer> </p>
+        <button class="btn btn-success" ng-click="startTimer('progressbar-timer')">Start Timer</button>
+        <button class="btn btn-danger" ng-click="stopTimer('progressbar-timer')">Stop Timer</button>
+    </div>
+</body>
+</html>

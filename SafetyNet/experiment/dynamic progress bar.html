@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="../common/bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet">
+     	<link href="../common/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="../common/css/officerControl.css">
+    	<script src="../common/bootstrap/docs/assets/js/bootstrap.min.js"></script>
+        <script src="../common/angular/angular.min.js"></script>
+        <script src="../common/js/TimeControllerApp.js"></script>
+    </head>
+    <body>
+        <div class="container" ng-app="myApp">
+            <div ng-controller="TimeCtrl">
+                 <div class="member" >
+                    <div class="controlContainer">
+                        <div class="nameContainer">
+                            黎學謙
+                        </div>
+                        <div id="buttonContainer">
+                            <button class="btns btn btn-danger" ng-click="relieveTimer()">解除</button>
+                            <button class="btns btn btn-info" ng-click="stopTimer()">暫停</button>
+                            <button class="btns btn btn-primary" ng-click="resetTimer()">重置</button>
+                            <button class="btns btn btn-success" ng-click="startTimer()">開始</button>
+                        </div> 
+                    </div>
+                    <div class="progressWatching">
+                        <div class="centered progress {{statusAttr}} progress-striped active">
+                            <div class="bar" style="width: {{percentage}}%">
+                                <span style="min-width: 2em; width: 2%; height: 2%">{{state}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infolog">
+                    經歷秒數 : {{seconds}}
+                    <br>
+                    開始時間 : {{startTime|date:'medium'}}
+                    <br>
+                    停止時間 : {{stopTime|date:'medium'}} 
+                    <br>
+                    解除時間 : {{endTime|date:'medium'}}           
+                </div>   
+            </div>
+            <div ng-controller="TimeCtrl">
+                 <div class="member" >
+                    <div class="controlContainer">
+                        <div class="nameContainer">
+                            劉培昱
+                        </div>
+                        <div id="buttonContainer">
+                            <button class="btns btn btn-danger" ng-click="relieveTimer()">解除</button>
+                            <button class="btns btn btn-info" ng-click="stopTimer()">暫停</button>
+                            <button class="btns btn btn-primary" ng-click="resetTimer()">重置</button>
+                            <button class="btns btn btn-success" ng-click="startTimer()">開始</button>
+                        </div> 
+                    </div>
+                    <div class="progressWatching">
+                        <div class="centered progress {{statusAttr}} progress-striped active">
+                            <div class="bar" style="width: {{percentage}}%">
+                                <span style="min-width: 2em; width: 2%; height: 2%">{{state}}</span>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+               <div class="infolog">
+                    經歷秒數 : {{seconds}}
+                    <br>
+                    開始時間 : {{startTime|date:'medium'}}
+                    <br>
+                    停止時間 : {{stopTime|date:'medium'}} 
+                    <br>
+                    解除時間 : {{endTime|date:'medium'}}           
+               </div>   
+            </div>
+          
+        </div>
+    </body>
+</html>

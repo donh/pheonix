@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Chat</title>
+        <link rel="stylesheet" href="./public/css/chatroom.css">
+    </head>
+    <body>
+    	<div id="content">
+    		<div id="room"></div>
+    		<div id="room-list"></div>
+    		<div id="message"></div>
+    		<form id="send-form">
+    			<input id="send-message" type="text"/>
+    			<input id="send-button" type="submit" value='Send'/>
+				<div id="help">
+					chat commands:
+					<ul>
+						<li>Change nickname <code>/[username]</code></li>
+						<li>Join/create room: <code>/join [room name]</code></li>
+					</ul>
+				</div>    		
+    		</form>
+    	</div>
+    	<script src="./node_modules/scoket.io.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    	<script src="./public/js/chats.js"></script> 
+    	<script src="./public/js/chat_ui.js"></script>   
+    </body>
+</html>
