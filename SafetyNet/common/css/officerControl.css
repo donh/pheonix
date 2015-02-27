@@ -1,0 +1,87 @@
+/* 
+* @Author: roverzon
+* @Date:   2015-02-21 00:12:44
+* @Last Modified by:   roverzon
+* @Last Modified time: 2015-02-21 17:30:27
+*/
+.container{
+    position: absolute;
+    top: 100px;
+    width: 800px;
+    height: 1000px;
+    margin: 50px;
+    /*background-color: blue;*/
+}
+
+.member{
+    width: 700px;
+    height: 200px;
+    margin: 50px;
+    /*background-color: green;*/
+    float: left;
+}
+
+.controlContainer{
+    height: 100px;
+    width: 680px;
+    margin: 10px;
+    margin-bottom: 5px;
+    font-size: 50px;
+    /*background-color: purple;*/
+
+}
+
+.nameContainer{
+    width: 200px;
+    height: 80px;
+    margin: 10px;
+    /*background-color: red;*/
+    float: left;
+    border: 20px;
+    text-align: center;
+}
+
+.name{
+    width: 180px;
+    margin: 10px;
+    height: 60px;
+    /*background-color: orange;*/
+}
+
+#buttonContainer{
+    width: 400px;    
+    height: 80px;
+    margin: 10px;
+    /*background-color: blue;*/
+    float: right;
+}
+
+.btns{
+    width: 80px;
+    height: 50px;
+    margin: 10px;
+    float: right;
+}
+
+.progressWatching{
+    height: 60px;
+    width: 680px;
+    margin: 10px;
+    /*background-color: yellow;*/
+    float: left;
+}
+
+.centered{
+    margin: 10px;
+    height: 40px;
+}
+
+.infolog{
+	width: 700px;
+    height: 100px;
+    /*background-color: orange;*/
+    float: left;
+    margin: 50px;
+    margin-top: 0px;
+    font-size: 20px;
+}

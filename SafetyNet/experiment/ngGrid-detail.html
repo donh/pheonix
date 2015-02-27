@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Getting Started With ngGrid Example</title>  
+        <link rel="stylesheet" type="text/css" href="../common/ng-grid-2.x/ng-grid.css" />
+        <script src="../common/jquery/jquery.js"></script>
+        <script src="../common/angular/angular.js"></script>
+        <script src="../common/ng-grid-2.x/ng-grid-2.0.14.min.js"></script>
+        <script>
+        	var app = angular.module('myApp', ['ngGrid']);
+			app.controller('MyCtrl', function($scope) {
+			    $scope.mySelections = [];
+			    $scope.myData = [{name: "Moroni", age: 50},
+			                     {name: "Tiancum", age: 43},
+			                     {name: "Jacob", age: 27},
+			                     {name: "Nephi", age: 29},
+			                     {name: "Enos", age: 34}];
+			    $scope.gridOptions = { 
+			      data: 'myData',
+			      selectedItems: $scope.mySelections,
+			      multiSelect: false
+			    };
+			});
+        </script>
+        <style>
+		.gridStyle {
+		    border: 1px solid rgb(212,212,212);
+		    width: 400px; 
+		    height: 300px;
+		    float: left;
+		}
+
+		.selectedItems{
+		    float: left; 
+		}
+        </style>
+    </head>
+     <body ng-controller="MyCtrl">
+        <div class="gridStyle" ng-grid="gridOptions"></div>
+        <div class="selectedItems">{{mySelections}}</div>
+    </body>
+</html>

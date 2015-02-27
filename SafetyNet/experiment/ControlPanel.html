@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link href="../common/bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet">
+        <link href="../common/bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+	</head>
+	<body>
+		<div ng-app="MemberApp" ng-controller="MemberCtrl">
+			<div>
+				<h3>作戰人員管控</h3>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>代號</th>
+							<th>姓名</th>
+							<th>職等</th>
+							<th>編組</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="member in members">
+							<td>{{ member.code }}</td>
+							<td>{{ member.name }}</td>
+							<td>{{ member.grade}}</td>
+							<td>{{ member.position }}</td>
+							<td>
+							<button class="btn" ng-click="assignStaff(member)">
+								出勤
+							</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<hr>
+			<div>
+				<h3>上班人員</h3>
+				<table class="table table-striped col-md-4" >
+					<thead>
+						<tr>
+							<th>代號</th>
+							<th>姓名</th>
+							<th>管控時間</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="staff in staffs">
+							<td>{{ staff.name }}</td>
+							<td>{{ staff.position }}</td>
+							<td>
+								<div ng-controller="MyAppController">
+									<div id="buttonContainer">
+	                        			<button class="btn btn-success" ng-click="startTimer('progressbar-timer')">Start Timer</button>
+								        <button class="btn btn-danger" ng-click="stopTimer('progressbar-timer')">Stop Timer</button>
+									<div class="progressWatching">
+                    					 <timer interval="1000"><div class="progress {{statusProperty}} progress-striped active"> <div class="bar" style="width: {{percentage}}%;"></div> </div></timer>
+                        				</div>
+                    					</div>
+                					</div>
+                				</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+	<script src="../common/bootstrap/docs/assets/js/bootstrap.min.js"></script>
+	<script src="../common/angular/angular.min.js"></script>
+	<script src="../common/js/moment.js"></script>
+	<script src="../common/js/timer.js"></script>
+	<script src="../common/js/TimeCtrl.js"></script>
+	<script src="../common/js/ui-bootstrap-tpls-0.12.0.min.js"></script>
+	<script src="../common/js/memberlist.js"></script>
+</html>
