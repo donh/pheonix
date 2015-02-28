@@ -4,7 +4,7 @@
 exports.root = function(req, res) {
 	// res.render('phx/home', { title: 'PHX' });
 	// res.render('index.html', { title: 'PHX' });
-	res.sendfile(__dirname + '/index.html');
+	res.sendfile(__dirname + '../public/index.html');
 };
 
 exports.react = function(req, res) {
