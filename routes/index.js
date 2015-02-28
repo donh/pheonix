@@ -6,7 +6,8 @@ exports.root = function(req, res) {
 	// res.render('index.html', { title: 'PHX' });
 	// res.sendfile(__dirname + '../public/index.html');
 	// res.sendfile(__dirname + '../public/index.html');
-	res.sendfile(__dirname + 'public/index.html');
+	// res.sendfile(__dirname + 'public/index.html');
+	res.sendfile('public/index.html');
 };
 
 exports.react = function(req, res) {

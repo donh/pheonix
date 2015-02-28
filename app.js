@@ -5,7 +5,7 @@ var routes = require('./routes');
 var path = require('path');
 var methodOverride = require('method-override');
 
-// app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'jade');
 
 //app.use(express.favicon());
@@ -14,6 +14,7 @@ app.use(express.urlencoded());
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 // development only
 if ('development' == app.get('env')) {
