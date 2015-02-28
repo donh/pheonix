@@ -7,7 +7,8 @@ exports.root = function(req, res) {
 	// res.sendfile(__dirname + '../public/index.html');
 	// res.sendfile(__dirname + '../public/index.html');
 	// res.sendfile(__dirname + 'public/index.html');
-	res.sendfile('public/index.html');
+	// res.sendfile('public/index.html');
+	res.sendfile('index.html');
 };
 
 exports.react = function(req, res) {
