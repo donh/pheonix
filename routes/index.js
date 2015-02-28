@@ -2,7 +2,8 @@
  * GET home page.
  */
 exports.root = function(req, res) {
-	res.render('phx/home', { title: 'PHX' });
+	// res.render('phx/home', { title: 'PHX' });
+	res.render('index.html', { title: 'PHX' });
 };
 
 exports.react = function(req, res) {
