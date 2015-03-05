@@ -103,6 +103,8 @@ var timerModule = angular.module('timer', [])
           $scope.clear();
           $scope.$emit('timer-stopped', {timeoutId: timeoutId, millis: $scope.millis, seconds: $scope.seconds, minutes: $scope.minutes, hours: $scope.hours, days: $scope.days});
           $scope.percentage = 0;
+          $scope.state = null;
+          // $scope.seconds = null;
         };
 
         $scope.clear = $element[0].clear = function () {
@@ -262,29 +264,30 @@ var timerModule = angular.module('timer', [])
           $scope.timeoutId = setTimeout(function () {
             tick();
             
-            if (  0 <= $scope.seconds && $scope.seconds< 5) {
+            if (  0 <= $scope.seconds && $scope.seconds< 10) {
               //blue
-                $scope.statusProperty = 'progress-info';
-                $scope.state = '職勤';
+                $scope.statusProperty = 'progress-bar-info';
+                $scope.state = '安全';
             }else if (5 <= $scope.seconds && $scope.seconds < 10) {
                 //green
-                $scope.statusProperty = 'progress-success';
-                $scope.state = '安全';
-            }else if (10 <= $scope.seconds && $scope.seconds < 15){
-                //yellow
-                $scope.statusProperty = 'progress-warning';
+                $scope.statusProperty = 'progress-bar-success';
                 $scope.state = '警告';
-            }else if(15 <= $scope.seconds && $scope.seconds < $scope.max){
-                //red
-                $scope.statusProperty = 'progress-danger';
+            }else if (10 <= $scope.seconds && $scope.seconds < $scope.max){
+                //yellow
+                $scope.statusProperty = 'progress-bar-warning';
                 $scope.state = '危險';
             }else{
-                $scope.statusProperty = 'progress-danger';
+                //red
+                $scope.statusProperty = 'progress-bar-danger';
                 $scope.state = '緊急狀況';
             };
 
-            $scope.percentage = ($scope.seconds / $scope.max)*100; 
+            if ($scope.seconds <= $scope.max) {
+              $scope.percentage = ($scope.seconds / $scope.max)*100; 
 
+            }else{
+              $scope.percentage = 100;
+            }
 
             $scope.$digest();
           }, $scope.interval - adjustment);
