@@ -5,8 +5,20 @@ var routes = require('./routes');
 var path = require('path');
 var methodOverride = require('method-override');
 
-app.set('views', path.join(__dirname, 'views'));
+
 // app.set('view engine', 'jade');
+
+// Using the .html extension instead of
+// having to name the views as *.ejs
+app.engine('.html', require('ejs').__express);
+
+// Set the folder where the pages are kept
+app.set('views', path.join(__dirname, 'views'));
+
+// This avoids having to provide the 
+// extension to res.render()
+app.set('view engine', 'html');
+
 
 //app.use(express.favicon());
 app.use(express.logger('dev'));

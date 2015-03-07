@@ -1,109 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    	<title>戰力管控版</title>
-        <meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
 		<link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/bootstrap-responsive.css" rel="stylesheet">
-        <style>
-        	#memberlist{
-
-        		/*position: absolute;*/
-        		float: left;
-			    top: 20px;
-			    left: 80px;
-			    width: 500px;
-			    margin: 20px;
-			    margin-top: 20px;
-			    /*background-color: green;*/
-        	}
-
-        	#dutytable{
-        		/*position: absolute;*/
-        		float: left;
-			    top: 20px;
-			    left: 50px;
-			    width: 1000px;
-			    margin: 50px;
-			    margin-top: 20px;
-			    /*background-color: red;*/
-        	}
-        	.table td{
-        		text-align: center;
-        	}
-
-        	.table thead th{
-        		text-align: center;
-        	}
-
-        </style>
-    </head>
-    <body>
-    	<div  ng-app="MemberApp" ng-controller="MemberCtrl">
-    		<div class="right">
-    			<table id="memberlist" class="table table-hover">
-		    		<thead>
-		    			<tr>
-		    				<th class="col-md-2 center">#</th>
-			    			<th class="col-md-4 center">姓名</th>
-			    			<th class="col-md-3 center">編組</th>
-			    			<th class="col-md-3 center"></th>
-		    			</tr>
-		    		</thead>
-		    		<tbody>
-		    			<tr ng-repeat="member in members">
-		    				<td class="center">1</td>
-		    				<td class="center">{{ member.name }}</td>
-		    				<td class="center">{{ member.position }}</td>
-		    				<td class="center"><button class="btn" ng-click="assignStaff(member)">出勤</button></td>
-		    			</tr>
-		    		</tbody>
-    			</table>
-    		</div>
-    		<div class="left">
-    			<table id="dutytable" class="table table-hover">
-    				<thead>
-    					<tr>
-		    				<th>#</th>
-			    			<th>姓名</th>
-			    			<th>編組</th>
-			    			<th></th>
-			    			<td>秒數</td>
-			    			<th>耗氧程度</th>
-			    			<th>狀態</th>
-		    			</tr>
-    				</thead>
-    				<tbody>
-						<tr ng-repeat="staff in staffs" ng-controller="MyAppController">
-    						<td>#</td>
-    						<td>{{ staff.name }}</td>
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	</head>
+	<body>
+		<div ng-app="MemberApp" ng-controller="MemberCtrl">
+			<div>
+				<h3>作戰人員管控</h3>
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>代號</th>
+							<th>姓名</th>
+							<th>職等</th>
+							<th>編組</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="member in members">
+							<td>{{ member.code }}</td>
+							<td>{{ member.name }}</td>
+							<td>{{ member.grade}}</td>
+							<td>{{ member.position }}</td>
+							<td>
+							<button class="btn" ng-click="assignStaff(member)">
+								出勤
+							</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<hr>
+			<div>
+				<h3>上班人員</h3>
+				<table class="table table-striped col-md-4" >
+					<thead>
+						<tr>
+							<th>代號</th>
+							<th>姓名</th>
+							<th>管控時間</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="staff in staffs">
+							<td>{{ staff.name }}</td>
 							<td>{{ staff.position }}</td>
-							<td>									
-	                			<button class="btn btn-success" ng-click="startTimer('progressbar-timer')">管控</button>
-						        <button class="btn btn-danger" ng-click="stopTimer('progressbar-timer')">解除</button>
-							</td>
 							<td>
-								<timer>{{seconds}}</timer>
+								<div ng-controller="MyAppController">
+									<div id="buttonContainer">
+										<button class="btn btn-success" ng-click="startTimer('progressbar-timer')">Start Timer</button>
+										<button class="btn btn-danger" ng-click="stopTimer('progressbar-timer')">Stop Timer</button>
+									<div class="progressWatching">
+										 <timer interval="1000"><div class="progress {{statusProperty}} progress-striped active"> <div class="bar" style="width: {{percentage}}%;"></div> </div></timer>
+										</div>
+										</div>
+									</div>
+								</div>
 							</td>
-							<td>
-								 <timer interval="1000"><div class="progress {{statusProperty}} progress-striped active"> <div class="bar" style="width: {{percentage}}%;"></div> </div></timer>
-							</td>
-							<td>
-								<timer>{{state}}</timer> 
-							</td>
-    					</tr>
-    				</tbody>
-    			</table>
-    		</div>
-    		
-    	</div>
-    </body>
-    <script src="js/bootstrap.min.js"></script>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/angular.min.js"></script>
-	<script src="js/memberlist.js"></script>
 	<script src="js/moment.js"></script>
 	<script src="js/timer.js"></script>
 	<script src="js/TimeCtrl.js"></script>
 	<script src="js/ui-bootstrap-tpls-0.12.0.min.js"></script>
-	
+	<script src="js/memberlist.js"></script>
 </html>
