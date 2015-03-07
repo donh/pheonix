@@ -10,10 +10,11 @@ var methodOverride = require('method-override');
 
 // Using the .html extension instead of
 // having to name the views as *.ejs
-app.engine('.html', require('ejs').__express);
+// app.engine('.html', require('ejs').__express);
+app.engine('.html', require('ejs').renderFile);
 
 // Set the folder where the pages are kept
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
 
 // This avoids having to provide the 
 // extension to res.render()
@@ -33,11 +34,11 @@ if ('development' == app.get('env')) {
 	app.use(express.errorHandler());
 }
 app.use('/', routes.root);
-app.use('/141022_react/', routes.react);
-app.use('/140811_auto/', routes.auto);
-app.use('/140610_doc/', routes.doc);
-app.use('/140415_wd/', routes.wd);
-app.use('/140217_epic/', routes.epic);
+// app.use('/141022_react/', routes.react);
+// app.use('/140811_auto/', routes.auto);
+// app.use('/140610_doc/', routes.doc);
+// app.use('/140415_wd/', routes.wd);
+// app.use('/140217_epic/', routes.epic);
 
 //app.use('/', routes.home);
 //app.use('/', routes.react);

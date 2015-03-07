@@ -2,13 +2,15 @@
  * GET home page.
  */
 exports.root = function(req, res) {
+	// console.log('exports.root = function(req, res)');
+	res.render('index', { title: 'PHX' });
 	// res.render('phx/home', { title: 'PHX' });
 	// res.render('index.html', { title: 'PHX' });
 	// res.sendfile(__dirname + '../public/index.html');
 	// res.sendfile(__dirname + '../public/index.html');
 	// res.sendfile(__dirname + 'public/index.html');
 	// res.sendfile('public/index.html');
-	res.sendfile('index.html');
+	// res.sendfile('index.html');
 };
 
 exports.react = function(req, res) {
