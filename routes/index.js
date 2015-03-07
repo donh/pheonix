@@ -3,7 +3,9 @@
  */
 exports.root = function(req, res) {
 	// console.log('exports.root = function(req, res)');
-	res.render('index', { title: 'PHX' });
+	// res.render('index', { title: 'PHX' });
+	// res.render(path.join(__dirname, 'index'));
+	res.render('index');
 	// res.render('phx/home', { title: 'PHX' });
 	// res.render('index.html', { title: 'PHX' });
 	// res.sendfile(__dirname + '../public/index.html');

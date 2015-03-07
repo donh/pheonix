@@ -26,10 +26,10 @@
     "socket.io": "~0.9.13",
     "grunt-develop": "~0.4.0",
     "method-override": "~2.3.0",
+    "ejs": "^2.3.1",
     "jade": "~1.7.0"
   },
   "devDependencies": {
-    "ejs": "^2.3.1",
     "grunt": "~0.4.0",
     "grunt-contrib-connect": "~0.4.1",
     "grunt-contrib-cssmin": "~0.4.1",
