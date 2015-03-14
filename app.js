@@ -27,8 +27,11 @@ app.use(express.urlencoded());
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'css')));
-app.use(express.static(path.join(__dirname, 'js')));
+// app.use(express.static(path.join(__dirname, 'css')));
+// app.use(express.static(path.join(__dirname, 'js')));
+app.use('/css', express.static(path.join(__dirname, 'css')));
+app.use('/js', express.static(path.join(__dirname, 'js')));
+
 
 
 
