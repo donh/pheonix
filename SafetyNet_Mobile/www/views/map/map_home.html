@@ -1,0 +1,25 @@
+<ion-view>
+  <ion-nav-title>
+    <span>Maps</span>
+  </ion-nav-title>
+  <ion-content ng-controller="GoogleMapsController">
+    
+    <leaflet center="myPos" layers="layers" markers="markers" height="480px" width="640px"></leaflet>
+      
+    </ion-tabs> 
+  </ion-content>
+  <ion-tabs class="tabs-icon-top tabs-assertive" >
+
+        
+        <ion-tab title="救災位置" icon="icon ion-ios-location">
+            
+        </ion-tab>
+
+         <ion-tab title="附近水源" icon="icon ion-waterdrop">
+            
+        </ion-tab>
+
+         <ion-tab title="派遣分隊" icon="icon ion-model-s">
+        </ion-tab>
+
+</ion-view>

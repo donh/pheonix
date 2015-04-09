@@ -1,0 +1,56 @@
+<ion-view view-title="作戰編組" ng-controller="employeeController">
+	<ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+        <a class="button button-icon icon ion-android-add" ng-href="#/app/missioncontrol/detail"></a>
+    </ion-nav-buttons>
+
+
+  <ion-content has-header="true" padding="true" ng-controller="HomeController">
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="showTaskForce()">
+         </ion-refresher>
+         <div class="list list-inset">
+		 <label class="item item-input">
+		    <i class="icon ion-search placeholder-icon"></i>
+		    <input type="text" placeholder="Search">
+		  </label>
+		</div>
+        <button class="button" ng-click="showTaskForce()">show task force</button>
+
+        <div class="list card" ng-repeat="taskForce in taskForceList" ng-controller="TimerCtrl">
+          <div class="item item-divider">
+            <div class="row">
+              <div class="col-90">小隊</div>
+              <div class="col-10"><div class="button icon-left button-clear">
+                <i class="icon icon-left ion-android-more-vertical"></i></div>
+              </div>
+            </div> 
+          </div>
+          <div class="item  item-avatar {{taskForce.missionTypeAttr}}" >
+            <img src="../../pics/Amy_Jones.jpg"/>
+              <h2>{{taskForce.missionType}}</h2>
+              <h3>{{taskForce.members[0].lastName}} {{taskForce.members[0].firstName}} {{taskForce.members[0].title}}</h3> 
+            </div>
+            <a class="item item-icon-left" href="#" ng-click="timerSwitch()" ng-if="taskForce.memberNumber > 0"><i class="icon ion-clock"></i>Mission Timer
+            <timer interval="1000">
+              <div class="progress table-elem"> 
+                <div class="progress-bar {{statusProperty}} progress-striped active" style="width: {{percentage}}%;">
+                </div> 
+              </div>
+                {{seconds}}
+             </timer>
+
+             </a>
+            
+            <a class="item item-icon-left" href="#" ng-if="taskForce.memberNumber > 0"><i class="icon ion-person-stalker"></i>View Direct Reports<p>{{taskForce.memberNumber}}</p></a>
+
+            <a class="item item-icon-left" href="sms:{{employee.cellPhone}}"><i class="icon ion-ios-telephone"></i>SMS<p>{{taskForce.members[0].cellPhone}}</p></a>
+
+        </div>
+
+    </ion-content>
+</ion-view>

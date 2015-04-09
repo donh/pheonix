@@ -1,0 +1,43 @@
+<ion-view title="Employee">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content has-header="true" padding="true" ng-controller="HomeController">
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="showTaskForce()">
+         </ion-refresher>
+        <button class="button" ng-click="showTaskForce()">show task force</button>
+
+        <div class="list card" ng-repeat="taskForce in taskForceList" ng-controller="TimerCtrl">
+            <div class="item item-avatar">
+                <img ng-src="Amy_Jones.jpg"/>
+                <h2>{{taskForce.mission}}</h2>
+                <p>{{taskForce.members[0].lastName}} {{taskForce.members[0].firstName}} {{taskForce.members[0].title}}</p>
+            </div>
+
+            <a class="item item-icon-left" href="#" ng-click="timerSwitch()" ng-if="taskForce.memberNumber > 0"><i class="icon ion-clock"></i>Mission Timer
+            <timer interval="1000">
+              <div class="progress table-elem"> 
+                <div class="progress-bar {{statusProperty}} progress-striped active" style="width: {{percentage}}%;">
+                </div> 
+              </div>
+                {{seconds}}
+             </timer>
+
+             </a>
+            
+            <a class="item item-icon-left" href="#" ng-if="taskForce.memberNumber > 0"><i class="icon ion-person-stalker"></i>View Direct Reports<p>{{taskForce.memberNumber}}</p></a>
+
+            <a class="item item-icon-left" href="tel:{{employee.officePhone}}"><i class="icon ion-ios7-telephone"></i>Call Office<p>{{taskForce.members[0].officePhone}}</p></a>
+
+            <a class="item item-icon-left" href="tel:{{employee.cellPhone}}"><i class="icon ion-ios7-telephone"></i>Call Cell<p>{{taskForce.members[0].cellPhone}}</p></a>
+
+            <a class="item item-icon-left" href="sms:{{employee.cellPhone}}"><i class="icon ion-chatbox-working"></i>SMS<p>{{taskForce.members[0].cellPhone}}</p></a>
+
+            <a class="item item-icon-left" href="mailto:{{employee.email}}"><i class="icon ion-ios7-email"></i>Email<p>{{taskForce.members[0].email}}</p></a>
+        </div>
+
+    </ion-content>
+
+</ion-view>

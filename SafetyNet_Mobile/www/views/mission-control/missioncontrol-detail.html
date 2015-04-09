@@ -1,0 +1,41 @@
+<ion-view title="任務編組" ng-controller="employeeController">
+  
+  <ion-nav-buttons side="right">
+        <a class="button button-icon" ng-click="saveTaskForce()"> 儲存 </a>
+    </ion-nav-buttons>
+
+  <ion-content class="has-header" >
+      <div class="list card">
+        <div class="item item-avatar">
+            <div class=" item item-text-wrap "> 
+              <label class="item item-input item-select">
+              <div class="input-label">
+                任務選擇
+              </div>
+              <select ng-model="mission" >
+                <option value="火災搶救">  火災搶救 </option>
+                <option value="緊急醫療">  緊急醫療 </option>
+                <option value="急難救援">  急難救援 </option>
+                <option value="休息待命">  休息待命 </option>
+              </select>
+            </label>
+            </div>
+        </div>
+      
+         <ion-list class="item item-text-wrap" show-reorder="true">
+           <ion-item ng-repeat="employee in checkedList" class="item-avatar  item-remove-animate">
+           <img src="../../pics/Amy_Jones.jpg" alt="">
+           {{employee.firstName}}
+            <ion-reorder-button class="ion-navicon"
+                        on-reorder="moveItem(employee, $fromIndex, $toIndex)"></ion-reorder-button>
+           </ion-item>
+
+        </ion-list>
+      </div>
+     
+    	 <ion-checkbox  class="radio" ng-repeat="employee in onDutyList"  href="" ng-model="employee.checked"
+    	 ng-click="postCheck()">
+          {{employee.lastName}} {{ employee.firstName }} {{employee.title}} {{employee.checked}}
+        </ion-checkbox>
+  </ion-content>
+</ion-view>

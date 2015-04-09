@@ -1,0 +1,28 @@
+<ion-view title="Mission" >
+  <ion-content>
+      <ion-list ng-controller="MyCtrl"
+      show-delete="shouldShowDelete"
+      show-reorder="shouldShowReorder"
+      can-swipe="listCanSwipe">
+      <ion-item ng-repeat="item in [1,2,3,4,5,6]" class="item-thumbnail-left" ng-controller="TimerCtrl">
+
+        <img ng-src="{{item.img}}">
+        <h2>程昌興</h2>
+        <p>大隊長</p>
+        <timer interval="1000">
+              <div class="progress table-elem"> 
+                <div class="progress-bar {{statusProperty}} progress-striped active" style="width: {{percentage}}%;">
+                </div> 
+              </div>
+             </timer>
+          <ion-option-button class="button-positive" ng-click="startTimer('progressbar-timer')">
+            管控
+          </ion-option-button>
+          <ion-option-button class="button-info" ng-click="stopTimer('progressbar-timer')">
+            取消
+          </ion-option-button>
+          <ion-delete-button class="ion-minus-circled" ng-click="items.splice($index, 1)">
+        </ion-item>
+      </ion-list>
+    </ion-content>
+</ion-view>
